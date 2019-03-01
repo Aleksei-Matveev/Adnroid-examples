@@ -1,17 +1,13 @@
-package by.matveev.textview;
+package by.matveev.androidexamples;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class TextView extends AppCompatActivity {
-
-    TextView txt1, txt2, txt3, txt4;
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_text_view);
-
-
+        setContentView(R.layout.activity_main);
     }
 }
