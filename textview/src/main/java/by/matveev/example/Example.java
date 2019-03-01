@@ -19,5 +19,11 @@ public class Example extends AppCompatActivity {
         txt3 = (TextView) findViewById(R.id.TextView3);
         txt4 = (TextView) findViewById(R.id.TextView4);
 
+        /***To make the TextView Selectable to copy the text on TextView by long click on TextView***/
+        txt1.setTextIsSelectable(true);
+        txt2.setTextIsSelectable(true);
+        txt3.setTextIsSelectable(true);
+        txt4.setTextIsSelectable(true);
+
     }
 }
