@@ -1,1 +1,1 @@
-include ':app', ':textview', ':edittext', ':toolbar'
+include ':app', ':textview', ':edittext', ':toolbar', ':snackbar'

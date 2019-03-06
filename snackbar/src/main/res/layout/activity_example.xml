@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!--Default SnackBar-->
+        <Button
+            android:id="@+id/btnDefaultSnack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:padding="05dp"
+            android:text="Default SnackBar"/>
+
+        <!--Custom SnackBar with Background and TextColor-->
+        <Button
+            android:id="@+id/btnCustomSnack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:padding="05dp"
+            android:text="SnackBar with Custom Background"/>
+
+        <!--SnackBar with Action-->
+        <Button
+            android:id="@+id/btnSnackWithAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:padding="05dp"
+            android:text="SnackBar with Action"/>
+
+        <!--SnackBar with Custom Text Position-->
+        <Button
+            android:id="@+id/btnSnackWithTextPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:padding="05dp"
+            android:text="SnackBar with Custom Text Position"/>
+
+        <!--Custom SnackBar Position-->
+        <Button
+            android:id="@+id/btnCustomSnackPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:padding="05dp"
+            android:text="SnackBar in Top Position"/>
+
+    </LinearLayout>
+
+    <!--To Display SnackBar int the Top Position-->
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/customSnack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
