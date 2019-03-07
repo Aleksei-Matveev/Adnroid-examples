@@ -51,12 +51,28 @@ public class Example extends AppCompatActivity {
             }
         });
 
+        /***Display SnackBar with Action Button***/
+        btnSnackWithAction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Snackbar snack = Snackbar.make(v, "SnackBar with Action", Snackbar.LENGTH_SHORT);
+                snack.getView().setBackgroundColor(ContextCompat.getColor(v.getContext(), android.R.color.holo_blue_dark));
+                snack.show();
+                snack.setAction("Dismiss", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        snack.dismiss();
+                    }
+                });
+            }
+        });
+
         /***Display SnackBar With Custom Text Position***/
         btnSnackWithTextPosition.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
             @Override
             public void onClick(View v) {
-                final Snackbar snack = Snackbar.make(v, "SnackBar with Action", Snackbar.LENGTH_SHORT);
+                final Snackbar snack = Snackbar.make(v, "SnackBar with Custom Position", Snackbar.LENGTH_SHORT);
                 snack.getView().setBackgroundColor(getResources().getColor(android.R.color.holo_red_dark));
                 View view = snack.getView();
                 TextView setTextGravity = view.findViewById(android.support.design.R.id.snackbar_text);
@@ -70,7 +86,16 @@ public class Example extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 View customPosition = findViewById(R.id.customSnack);
-                final Snackbar snack = Snackbar.make(v, "")
+                final Snackbar snack = Snackbar.make(customPosition, "SnackBar in Top of the Screen", Snackbar.LENGTH_SHORT);
+                snack.getView().setBackgroundColor(ContextCompat.getColor(v.getContext(), R.color.colorPrimaryDark));
+                snack.setActionTextColor(getResources().getColor(android.R.color.white));
+                snack.show();
+                snack.setAction("Dismiss", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        snack.dismiss();
+                    }
+                });
             }
         });
     }
